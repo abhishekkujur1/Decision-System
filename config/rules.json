@@ -1,0 +1,13 @@
+{
+  "application_approval": {
+    "mandatory_checks": ["doc_id", "income"],
+    "thresholds": [
+      {
+        "name": "High Risk Flag",
+        "field": "requested_amount",
+        "operator": ">",
+        "value": 50000
+      }
+    ]
+  }
+}
