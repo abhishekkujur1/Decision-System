@@ -1,0 +1,12 @@
+global_settings:
+  max_retries: 3
+  timeout_seconds: 30
+
+workflows:
+  application_approval:
+    stages:
+      - external_verification
+      - rule_evaluation
+    on_success: "APPROVED"
+    on_reject: "REJECTED"
+    on_flag: "MANUAL_REVIEW"
